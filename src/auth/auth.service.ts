@@ -6,7 +6,7 @@ import * as bcrypt from 'bcrypt';
 
 import { LoginUserDto, RegisterUserDto } from './dto';
 import { JwtPayload } from './interfaces/jwt-payload.interface';
-import { envs } from 'src/config/envs';
+import { envs } from '../config/envs';
 
 @Injectable()
 export class AuthService extends PrismaClient implements OnModuleInit {

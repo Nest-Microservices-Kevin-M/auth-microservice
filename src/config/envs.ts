@@ -2,12 +2,14 @@ import 'dotenv/config';
 import * as joi from 'joi';
 
 interface IEnvs {
+  DATABASE_URL: string;
   NATS_SERVERS: string[];
   JWT_SECRET: string;
 }
 
 const schema = joi
   .object({
+    DATABASE_URL: joi.string().required(),
     NATS_SERVERS: joi.array().items(joi.string()).required(),
     JWT_SECRET: joi.string().required(),
   })
